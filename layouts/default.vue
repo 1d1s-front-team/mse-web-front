@@ -17,6 +17,11 @@
         <nuxt />
       </v-container>
     </v-content>
+
+    <v-footer class="pa-3">
+    <v-spacer></v-spacer>
+    <div>&copy; {{ year }}</div>
+  </v-footer>
   </v-app>
 </template>
 
@@ -24,7 +29,11 @@
   export default {
     data () {
       return {
-
+      }
+    },
+    computed: {
+      year: function () {
+        return new Date().getFullYear()
       }
     }
   }

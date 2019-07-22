@@ -1,7 +1,7 @@
 module.exports = {
     root: true,
     extends: [
-        'plugin: vue/essential'
+        'plugin:vue/essential'
     ],
     parserOptions: {
         parser: 'babel-eslint',

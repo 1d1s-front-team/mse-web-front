@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _38e907de = () => interopDefault(import('../pages/board.vue' /* webpackChunkName: "pages/board" */))
+const _7044bb6c = () => interopDefault(import('../pages/gallery.vue' /* webpackChunkName: "pages/gallery" */))
+const _03104762 = () => interopDefault(import('../pages/schedule.vue' /* webpackChunkName: "pages/schedule" */))
 const _68846bca = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
@@ -79,6 +82,18 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
+      path: "/board",
+      component: _38e907de,
+      name: "board"
+    }, {
+      path: "/gallery",
+      component: _7044bb6c,
+      name: "gallery"
+    }, {
+      path: "/schedule",
+      component: _03104762,
+      name: "schedule"
+    }, {
       path: "/",
       component: _68846bca,
       name: "index"

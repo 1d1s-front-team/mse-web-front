@@ -1,12 +1,14 @@
 <template>
   <v-app>
     <v-toolbar app>
-      <v-toolbar-title>MSE</v-toolbar-title>
+      <v-toolbar-title>
+        MSE
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat>BOARD</v-btn>
-        <v-btn flat>GALLERY</v-btn>
-        <v-btn flat>SCHEDULE</v-btn>
+        <v-btn flat nuxt to="/board">BOARD</v-btn>
+        <v-btn flat nuxt to="/gallery">GALLERY</v-btn>
+        <v-btn flat nuxt to="/schedule">SCHEDULE</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     
@@ -22,11 +24,7 @@
   export default {
     data () {
       return {
-        items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
-        ],
-        right: null
+
       }
     }
   }

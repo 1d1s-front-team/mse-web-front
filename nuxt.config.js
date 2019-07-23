@@ -13,10 +13,12 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
   /*
   ** Build configuration
   */
@@ -35,12 +37,17 @@ module.exports = {
       }
     }
   },
+
   modules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/axios',
   ],
   vuetify: {
     // Vuetify options
     //  theme: { }
-  }
+  },
+  axios: {
+    // proxyHeaders: false
+  },
 }
 

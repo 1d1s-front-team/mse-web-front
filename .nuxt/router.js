@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _2c895320 = () => interopDefault(import('..\\pages\\board.vue' /* webpackChunkName: "pages_board" */))
-const _e552d748 = () => interopDefault(import('..\\pages\\gallery.vue' /* webpackChunkName: "pages_gallery" */))
-const _2fc5a706 = () => interopDefault(import('..\\pages\\schedule.vue' /* webpackChunkName: "pages_schedule" */))
-const _1956ba5c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _38e907de = () => interopDefault(import('../pages/board.vue' /* webpackChunkName: "pages/board" */))
+const _7044bb6c = () => interopDefault(import('../pages/gallery.vue' /* webpackChunkName: "pages/gallery" */))
+const _03104762 = () => interopDefault(import('../pages/schedule.vue' /* webpackChunkName: "pages/schedule" */))
+const _68846bca = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
 
@@ -83,19 +83,19 @@ export function createRouter() {
 
     routes: [{
       path: "/board",
-      component: _2c895320,
+      component: _38e907de,
       name: "board"
     }, {
       path: "/gallery",
-      component: _e552d748,
+      component: _7044bb6c,
       name: "gallery"
     }, {
       path: "/schedule",
-      component: _2fc5a706,
+      component: _03104762,
       name: "schedule"
     }, {
       path: "/",
-      component: _1956ba5c,
+      component: _68846bca,
       name: "index"
     }],
 

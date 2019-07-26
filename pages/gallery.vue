@@ -2,7 +2,7 @@
     <v-app>
         <p>This is where the gallery contents are located</p>
         <p>test: {{ gallery_example.title }}</p>
-        <!--<p>{{ user }}</p>-->
+        <p>{{ user }}</p>
     </v-app>
 </template>
 
@@ -20,9 +20,9 @@
                 },
             }
         },
-        // async asyncData({ $axios }) {
-        //     const user = await $axios.$get('localhost:8080/api/user')
-        //     return { user }
-        // }
+        async asyncData({ $axios }) {
+            const user = await $axios.$get('http://localhost:8080/api/user')
+            return { user }
+        }
     }
 </script>

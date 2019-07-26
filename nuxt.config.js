@@ -37,7 +37,9 @@ module.exports = {
       }
     }
   },
-
+  router: {
+    mode: 'history'
+  },
   modules: [
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',

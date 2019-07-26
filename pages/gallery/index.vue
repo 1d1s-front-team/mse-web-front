@@ -9,11 +9,13 @@
                 class="elevation-1"
         >
             <template slot="items" slot-scope="props">
-                <td>{{ props.item.id }}</td>
-                <td class="text-xs-right">{{ props.item.title }}</td>
-                <td class="text-xs-right">{{ props.item.hits }}</td>
-                <td class="text-xs-right">{{ props.item.date }}</td>
-                <td class="text-xs-right">{{ props.item.student_id }}</td>
+                <tr @click="viewGalleryPost(props.item.id)">
+                    <td>{{ props.item.id }}</td>
+                    <td class="text-xs-right">{{ props.item.title }}</td>
+                    <td class="text-xs-right">{{ props.item.hits }}</td>
+                    <td class="text-xs-right">{{ props.item.date }}</td>
+                    <td class="text-xs-right">{{ props.item.student_id }}</td>
+                </tr>
             </template>
         </v-data-table>
     </v-app>
@@ -49,6 +51,13 @@
             const gallery = await $axios.$get('/api/gallery')
             console.log(gallery)
             return { gallery }
+        },
+        methods : {
+            viewGalleryPost: function (id) {
+                console.log(id);
+                this.$router.push({ name: 'gallery-id', params: { id }});
+                // location.reload();
+            },
         }
     }
 </script>

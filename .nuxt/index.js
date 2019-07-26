@@ -3,15 +3,15 @@ import Meta from 'vue-meta'
 import { createRouter } from './router.js'
 import NoSsr from './components/no-ssr.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from '..\\layouts\\error.vue'
+import NuxtError from '../layouts/error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_vuetify_08e8b994 from 'nuxt_plugin_vuetify_08e8b994' // Source: .\\vuetify.js (mode: 'all')
-import nuxt_plugin_axios_6b2cd58e from 'nuxt_plugin_axios_6b2cd58e' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_vuetify_06939abc from 'nuxt_plugin_vuetify_06939abc' // Source: ./vuetify.js (mode: 'all')
+import nuxt_plugin_axios_ae8e12d8 from 'nuxt_plugin_axios_ae8e12d8' // Source: ./axios.js (mode: 'all')
 
 // Component: <NoSsr>
 Vue.component(NoSsr.name, NoSsr)
@@ -130,12 +130,12 @@ async function createApp(ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_vuetify_08e8b994 === 'function') {
-    await nuxt_plugin_vuetify_08e8b994(app.context, inject)
+  if (typeof nuxt_plugin_vuetify_06939abc === 'function') {
+    await nuxt_plugin_vuetify_06939abc(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_6b2cd58e === 'function') {
-    await nuxt_plugin_axios_6b2cd58e(app.context, inject)
+  if (typeof nuxt_plugin_axios_ae8e12d8 === 'function') {
+    await nuxt_plugin_axios_ae8e12d8(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

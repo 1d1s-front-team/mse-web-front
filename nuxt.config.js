@@ -42,6 +42,7 @@ module.exports = {
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
   ],
+
   vuetify: {
     // Vuetify options
     //  theme: { }
@@ -50,5 +51,8 @@ module.exports = {
     proxyHeaders: false,
     credentials: false,
   },
+  css: [
+    '@/assets/css/style.css',
+  ],
 }
 

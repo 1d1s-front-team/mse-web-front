@@ -1,7 +1,21 @@
 <template>
     <v-app>
         <p>This is where the gallery contents are located</p>
-        <p>{{ user }}</p>
+
+        <v-data-table
+                :headers="headers"
+                :items="gallery"
+                :items-per-page="10"
+                class="elevation-1"
+        >
+            <template slot="items" slot-scope="props">
+                <td>{{ props.item.id }}</td>
+                <td class="text-xs-right">{{ props.item.title }}</td>
+                <td class="text-xs-right">{{ props.item.hits }}</td>
+                <td class="text-xs-right">{{ props.item.date }}</td>
+                <td class="text-xs-right">{{ props.item.student_id }}</td>
+            </template>
+        </v-data-table>
     </v-app>
 </template>
 
@@ -17,11 +31,24 @@
                     student_id: 32101010,
                     content: "hi"
                 },
+                headers: [
+                    {
+                        text: 'ID',
+                        align: 'center',
+                        sortable: true,
+                        value: 'id',
+                    },
+                    { text: 'TITLE', value: 'title' },
+                    { text: 'HITS', value: 'hits' },
+                    { text: 'DATE', value: 'date' },
+                    { text: 'STUDENT ID', value: 'student_id' },
+                ],
             }
         },
         async asyncData({ $axios }) {
-            const user = await $axios.$get('http://220.149.244.212:8080/api/gallery')
-            return { user }
+            const gallery = await $axios.$get('/api/gallery')
+            console.log(gallery)
+            return { gallery }
         }
     }
 </script>

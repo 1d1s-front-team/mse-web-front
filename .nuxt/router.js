@@ -4,6 +4,7 @@ import { interopDefault } from './utils'
 
 const _38e907de = () => interopDefault(import('../pages/board.vue' /* webpackChunkName: "pages/board" */))
 const _7044bb6c = () => interopDefault(import('../pages/gallery.vue' /* webpackChunkName: "pages/gallery" */))
+const _130fbaf5 = () => interopDefault(import('../pages/gallery/_id.vue' /* webpackChunkName: "pages/gallery/_id" */))
 const _03104762 = () => interopDefault(import('../pages/schedule.vue' /* webpackChunkName: "pages/schedule" */))
 const _68846bca = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -88,7 +89,12 @@ export function createRouter() {
     }, {
       path: "/gallery",
       component: _7044bb6c,
-      name: "gallery"
+      name: "gallery",
+      children: [{
+        path: ":id?",
+        component: _130fbaf5,
+        name: "gallery-id"
+      }]
     }, {
       path: "/schedule",
       component: _03104762,

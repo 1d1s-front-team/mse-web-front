@@ -116,9 +116,9 @@ export default {
 <style>
 .container {
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
 }
 

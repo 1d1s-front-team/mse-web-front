@@ -20,7 +20,7 @@
             }
         },
         async asyncData({ $axios }) {
-            const user = await $axios.$get('http://220.149.244.212:8080/api/gallery')
+            const user = await $axios.$get('/api/gallery')
             return { user }
         }
     }

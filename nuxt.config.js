@@ -50,6 +50,7 @@ module.exports = {
     //  theme: { }
   },
   axios: {
+    baseURL: 'http://220.149.244.212:8080',
     proxyHeaders: false,
     credentials: false,
   },

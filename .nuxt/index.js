@@ -11,6 +11,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_vuetify_08e8b994 from 'nuxt_plugin_vuetify_08e8b994' // Source: .\\vuetify.js (mode: 'all')
+import nuxt_plugin_templatesplugin145aab48_aac78f6c from 'nuxt_plugin_templatesplugin145aab48_aac78f6c' // Source: .\\templates.plugin.145aab48.js (mode: 'all')
 import nuxt_plugin_axios_6b2cd58e from 'nuxt_plugin_axios_6b2cd58e' // Source: .\\axios.js (mode: 'all')
 
 // Component: <NoSsr>
@@ -132,6 +133,10 @@ async function createApp(ssrContext) {
 
   if (typeof nuxt_plugin_vuetify_08e8b994 === 'function') {
     await nuxt_plugin_vuetify_08e8b994(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_templatesplugin145aab48_aac78f6c === 'function') {
+    await nuxt_plugin_templatesplugin145aab48_aac78f6c(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_6b2cd58e === 'function') {

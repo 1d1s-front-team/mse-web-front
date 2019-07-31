@@ -13,12 +13,10 @@
     </v-toolbar>
     
     <v-content>
-      <v-container fluid fill-height>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
 
-    <v-footer class="pa-3">
+    <v-footer app class="pa-3">
     <v-spacer></v-spacer>
     <div>&copy; {{ year }}</div>
   </v-footer>

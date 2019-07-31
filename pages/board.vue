@@ -1,8 +1,10 @@
 <template>
-    <v-app>
-        <p>This is where the board contents are located</p>
-        <p>test: {{ board_example.title }}</p>
-    </v-app>
+    <v-container fluid>
+        <div class="indigo lighten-4">
+            <p>This is where the board contents are located</p>
+            <p>test: {{ board_example.title }}</p>
+        </div>
+    </v-container>
 </template>
 
 <script>

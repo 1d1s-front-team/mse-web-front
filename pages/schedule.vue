@@ -1,8 +1,8 @@
 <template>
-    <v-app>
+    <v-container>
         <p>This is where the schedule contents are located</p>
         <p>test: {{ schedule_example.title }}</p>
-    </v-app>
+    </v-container>
 </template>
 
 <script>

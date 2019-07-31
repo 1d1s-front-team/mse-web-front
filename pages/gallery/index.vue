@@ -1,7 +1,5 @@
 <template>
-    <v-app>
-        <p>This is where the gallery contents are located</p>
-
+    <v-container>
         <v-data-table
                 :headers="headers"
                 :items="gallery"
@@ -18,7 +16,7 @@
                 </tr>
             </template>
         </v-data-table>
-    </v-app>
+    </v-container>
 </template>
 
 <script>

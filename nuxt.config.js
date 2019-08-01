@@ -11,7 +11,6 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { href: 'https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css', rel: 'stylesheet'}
     ],
     script: [
       { src: 'https://kit.fontawesome.com/b5c398a949.js' }
@@ -22,44 +21,33 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
-
   /*
   ** Build configuration
   */
-  build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        })
-      }
+ build: {
+   /*
+   ** Run ESLint on save
+   */
+  extend (config, { isDev, isClient }) {
+    if (isDev && isClient) {
+      config.module.rules.push({
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules)/,
+      })
     }
   },
+},
+  plugins: [
+    { src: '~/plugins/vue-ckeditor', ssr: false }
+  ],
   router: {
     mode: 'history'
   },
   modules: [
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
-    ['nuxt-fontawesome', {
-      component: 'fa',
-      imports: [
-        {
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['fas']
-        },
-        // {
-        //   set: '@fortawesome/pro-regular-svg-icons',
-        //   icons: ['faAdjust', 'faArchive']
-        // }
-      ]
-    }]
   ],
 
   vuetify: {

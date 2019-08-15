@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 const _38e907de = () => interopDefault(import('../pages/board.vue' /* webpackChunkName: "pages/board" */))
 const _84146d66 = () => interopDefault(import('../pages/gallery/index.vue' /* webpackChunkName: "pages/gallery/index" */))
 const _03104762 = () => interopDefault(import('../pages/schedule.vue' /* webpackChunkName: "pages/schedule" */))
+const _4b1963da = () => interopDefault(import('../pages/signin.vue' /* webpackChunkName: "pages/signin" */))
 const _130fbaf5 = () => interopDefault(import('../pages/gallery/_id.vue' /* webpackChunkName: "pages/gallery/_id" */))
 const _68846bca = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -94,6 +95,10 @@ export function createRouter() {
       path: "/schedule",
       component: _03104762,
       name: "schedule"
+    }, {
+      path: "/signin",
+      component: _4b1963da,
+      name: "signin"
     }, {
       path: "/gallery/:id",
       component: _130fbaf5,

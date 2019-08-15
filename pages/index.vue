@@ -2,6 +2,9 @@
   <section class="container">
     <div>
       <template>
+        <div>
+          <nuxt-link to="signin">Sign In</nuxt-link>
+        </div>
         <v-data-iterator
           :items="items"
           content-tag="v-layout"

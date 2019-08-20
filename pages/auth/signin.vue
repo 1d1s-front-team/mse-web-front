@@ -77,16 +77,16 @@
         },
         methods: {
             async submit () {
-                const newUser = await this.$axios.$post(`/api/auth/register`,
-                    {
-                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                        body: {
-                            id: this.id,
-                            username: this.username,
-                            password: this.password
-                        }
-                    })
-                console.log(newUser)
+                this.$axios.$post(`/api/auth/register`, {
+                    id: this.id,
+                    username: this.username,
+                    password: this.password
+                }).then((res) => {
+                    this.$router.push({ name: 'signin-success', param: { res } });
+                }).catch((err) => {
+                    console.log(err)
+                })
+                console.log("POST request submitted")
             },
         }
     }

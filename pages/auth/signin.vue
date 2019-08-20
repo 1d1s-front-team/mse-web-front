@@ -82,9 +82,11 @@
                     username: this.username,
                     password: this.password
                 }).then((res) => {
-                    this.$router.push({ name: 'signin-success', param: { res } });
+                    console.log("submit method: " + res);
+                    this.$router.push({ path: '/auth/signin-success', param: res });
                 }).catch((err) => {
-                    console.log(err)
+                    console.log("submit method: " + err)
+                    this.$router.push({ path: '/auth/signin-failure', param: err });
                 })
                 console.log("POST request submitted")
             },

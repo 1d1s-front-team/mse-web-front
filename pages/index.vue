@@ -3,7 +3,7 @@
     <div>
       <template>
         <div>
-          <nuxt-link to="/auth/signin">Sign In</nuxt-link>
+          <nuxt-link to="/auth/register">Sign Up</nuxt-link>
         </div>
         <v-data-iterator
           :items="items"

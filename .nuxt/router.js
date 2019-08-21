@@ -5,9 +5,9 @@ import { interopDefault } from './utils'
 const _38e907de = () => interopDefault(import('../pages/board.vue' /* webpackChunkName: "pages/board" */))
 const _84146d66 = () => interopDefault(import('../pages/gallery/index.vue' /* webpackChunkName: "pages/gallery/index" */))
 const _03104762 = () => interopDefault(import('../pages/schedule.vue' /* webpackChunkName: "pages/schedule" */))
-const _0da19d61 = () => interopDefault(import('../pages/auth/signin.vue' /* webpackChunkName: "pages/auth/signin" */))
-const _9f3d9ac4 = () => interopDefault(import('../pages/auth/signin-failure.vue' /* webpackChunkName: "pages/auth/signin-failure" */))
-const _2d6746d2 = () => interopDefault(import('../pages/auth/signin-success.vue' /* webpackChunkName: "pages/auth/signin-success" */))
+const _d66ef3bc = () => interopDefault(import('../pages/auth/register.vue' /* webpackChunkName: "pages/auth/register" */))
+const _7db7ca5f = () => interopDefault(import('../pages/auth/register-failure.vue' /* webpackChunkName: "pages/auth/register-failure" */))
+const _92ba1750 = () => interopDefault(import('../pages/auth/register-success.vue' /* webpackChunkName: "pages/auth/register-success" */))
 const _130fbaf5 = () => interopDefault(import('../pages/gallery/_id.vue' /* webpackChunkName: "pages/gallery/_id" */))
 const _68846bca = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -98,17 +98,17 @@ export function createRouter() {
       component: _03104762,
       name: "schedule"
     }, {
-      path: "/auth/signin",
-      component: _0da19d61,
-      name: "auth-signin"
+      path: "/auth/register",
+      component: _d66ef3bc,
+      name: "auth-register"
     }, {
-      path: "/auth/signin-failure",
-      component: _9f3d9ac4,
-      name: "auth-signin-failure"
+      path: "/auth/register-failure",
+      component: _7db7ca5f,
+      name: "auth-register-failure"
     }, {
-      path: "/auth/signin-success",
-      component: _2d6746d2,
-      name: "auth-signin-success"
+      path: "/auth/register-success",
+      component: _92ba1750,
+      name: "auth-register-success"
     }, {
       path: "/gallery/:id",
       component: _130fbaf5,

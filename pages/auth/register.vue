@@ -37,7 +37,7 @@
 
 <script>
     export default {
-        name: "signin",
+        name: "register",
         data: () => ({
             valid: true,
             show: false,
@@ -83,10 +83,10 @@
                     password: this.password
                 }).then((res) => {
                     console.log("submit method: " + res);
-                    this.$router.push({ path: '/auth/signin-success', param: res });
+                    this.$router.push({ path: '/auth/register-success', param: res });
                 }).catch((err) => {
                     console.log("submit method: " + err)
-                    this.$router.push({ path: '/auth/signin-failure', param: err });
+                    this.$router.push({ path: '/auth/register-failure', param: err });
                 })
                 console.log("POST request submitted")
             },

@@ -1,17 +1,17 @@
 <template>
     <v-container>
-        <h1>Sign in Failure :(</h1>
-        <p>reason: {{ error }}</p>
+        <h1>Successfully signed up :)</h1>
+        <p>{{ data }}</p>
     </v-container>
 </template>
 
 <script>
     export default {
-        name: "signin-failure",
+        name: "register_success",
 
         data () {
             return {
-                error: this.$route.params.err,
+                data: this.$route.params.res,
             }
         }
     }

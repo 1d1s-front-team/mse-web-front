@@ -11,7 +11,7 @@
 
         data () {
             return {
-                data: this.$route.params.res,
+                data: this.$route.params.result,
             }
         }
     }

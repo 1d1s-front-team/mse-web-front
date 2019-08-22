@@ -29,7 +29,7 @@
                                 label="Confirm Password"
                                 required
                     ></v-text-field>
-                <v-btn @click="submit">Submit</v-btn>
+                <v-btn :disabled="!valid" @click="submit">Submit</v-btn>
             </v-container>
         </v-form>
     </v-container>
@@ -82,11 +82,11 @@
                     username: this.username,
                     password: this.password
                 }).then((res) => {
-                    console.log("submit method: " + res);
-                    this.$router.push({ path: '/auth/register-success', param: res });
+                    console.log("submit response: " + res);
+                    this.$router.push({ path: '/auth/register-success', params: { result: res }});
                 }).catch((err) => {
-                    console.log("submit method: " + err)
-                    this.$router.push({ path: '/auth/register-failure', param: err });
+                    console.log("submit error: " + err);
+                    this.$router.push({ path: '/auth/register-failure', params: { result: err }});
                 })
                 console.log("POST request submitted")
             },
